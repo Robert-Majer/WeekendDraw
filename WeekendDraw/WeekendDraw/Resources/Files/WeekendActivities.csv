@@ -1,0 +1,45 @@
+Id,ActivityName,IsSunnyDayNeeded,IsNoCost
+1,Go to the swimming pool,FALSE,FALSE
+2,Go to the cinema,FALSE,FALSE
+3,Go to the theater,FALSE,FALSE
+4,Go to the trampoline park,FALSE,FALSE
+5,Go to the SPA,FALSE,FALSE
+6,Go to the escape room,FALSE,FALSE
+7,Go paintball,FALSE,FALSE
+8,Go to the club,FALSE,FALSE
+9,Go squash,FALSE,FALSE
+10,Go to the climbing walls,FALSE,FALSE
+11,Go karting,FALSE,FALSE
+12,Go to the shooting range,FALSE,FALSE
+13,Go to the VR game zone,FALSE,FALSE
+14,Bicycle tour,TRUE,TRUE
+15,Go to the mountains,TRUE,TRUE
+16,Go bowling,FALSE,FALSE
+17,Visit a friend,FALSE,TRUE
+18,Visit a friend,TRUE,TRUE
+19,"Get to know a new place e.g. a monument",FALSE,FALSE
+20,"Get to know a new place e.g. a monument",TRUE,TRUE
+21,"Get to know a new place e.g. a monument",TRUE,FALSE
+22,Go to the rope park,TRUE,FALSE
+23,Go to the concert,FALSE,FALSE
+24,Go to the concert,TRUE,FALSE
+25,Go to the cabaret,FALSE,FALSE
+26,Camping trip,TRUE,TRUE
+27,Camping trip,TRUE,FALSE
+28,Relax by the river or lake,TRUE,FALSE
+29,River or lake activity,TRUE,TRUE
+30,House party,FALSE,TRUE
+31,House party,TRUE,TRUE
+32,Go for a run,FALSE,TRUE
+33,Go for a run,TRUE,TRUE
+34,Home karaoke,FALSE,TRUE
+35,Home disco,FALSE,TRUE
+36,Video games day,FALSE,TRUE
+37,Board game day,FALSE,TRUE
+38,Playing instruments together,FALSE,TRUE
+39,Cooking dinner together,FALSE,FALSE
+40,Baking a cake together,FALSE,FALSE
+41,Going to a bar with friends,FALSE,FALSE
+42,Do something new - start creativity,FALSE,TRUE
+43,Do something new - start creativity,TRUE,TRUE
+44,Go for a walk to a nice place,TRUE,TRUE
