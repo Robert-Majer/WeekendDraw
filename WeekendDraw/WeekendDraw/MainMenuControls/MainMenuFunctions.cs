@@ -1,4 +1,5 @@
-﻿using WeekendDraw.Components.CsvReader.Extensions;
+﻿using System.Diagnostics;
+using WeekendDraw.Components.CsvReader.Extensions;
 using WeekendDraw.Components.CsvReader.Models;
 
 namespace WeekendDraw.MainMenuControls
@@ -24,7 +25,9 @@ namespace WeekendDraw.MainMenuControls
 
                 if (input == null)
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Choose yes or no!");
+                    Console.ResetColor();
                 }
                 else if (input.ToLower() == "yes" || input.ToLower() == "no")
                 {
@@ -42,7 +45,9 @@ namespace WeekendDraw.MainMenuControls
                 }
                 else
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Choose yes or no!");
+                    Console.ResetColor();
                 }
             }
 
@@ -54,7 +59,9 @@ namespace WeekendDraw.MainMenuControls
 
                 if (input == null)
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Choose yes or no!");
+                    Console.ResetColor();
                 }
                 else if (input.ToLower() == "yes" || input.ToLower() == "no")
                 {
@@ -72,7 +79,9 @@ namespace WeekendDraw.MainMenuControls
                 }
                 else
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Choose yes or no!");
+                    Console.ResetColor();
                 }
             }
 
@@ -83,15 +92,19 @@ namespace WeekendDraw.MainMenuControls
             var randomIndex = random.Next(0, drawActivitiesList.Count);
             var drawActivity = drawActivitiesList[randomIndex].Name.ToString();
 
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("  ---==== Drawn activity: " + drawActivity.ToUpper() + " ====---");
             Console.WriteLine("  ---==== Have a nice weekend! :)  ====---");
+            Console.ResetColor();
         }
 
         public void EditWeekendActivities()
         {
             Console.WriteLine();
             Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine("         --== EDIT ==--  ");
+            Console.ResetColor();
             Console.WriteLine();
             Console.WriteLine("[SHOW] - show all weekend activities");
             Console.WriteLine("[ADD] - add new activity");
@@ -106,7 +119,9 @@ namespace WeekendDraw.MainMenuControls
                 if (input == null)
                 {
                     Console.WriteLine();
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Wrong choice! Choose SHOW / ADD / DELETE / MENU");
+                    Console.ResetColor();
                 }
                 else if (input.ToLower() == "show" || input.ToLower() == "add" || input.ToLower() == "delete" || input.ToLower() == "menu" || input.ToLower() == "save")
                 {
@@ -132,7 +147,9 @@ namespace WeekendDraw.MainMenuControls
                                 if (inputAdd == null || inputAdd.Length < 4)
                                 {
                                     Console.WriteLine();
+                                    Console.ForegroundColor = ConsoleColor.Red;
                                     Console.WriteLine("Wrong name [at least 4 letters]");
+                                    Console.ResetColor();
                                 }
                                 else
                                 {
@@ -150,7 +167,9 @@ namespace WeekendDraw.MainMenuControls
 
                                 if (inputAdd == null)
                                 {
+                                    Console.ForegroundColor = ConsoleColor.Red;
                                     Console.WriteLine("Choose yes or no!");
+                                    Console.ResetColor();
                                 }
                                 else if (inputAdd.ToLower() == "yes" || inputAdd.ToLower() == "no")
                                 {
@@ -168,7 +187,9 @@ namespace WeekendDraw.MainMenuControls
                                 }
                                 else
                                 {
+                                    Console.ForegroundColor = ConsoleColor.Red;
                                     Console.WriteLine("Choose yes or no!");
+                                    Console.ResetColor();
                                 }
                             }
 
@@ -180,7 +201,9 @@ namespace WeekendDraw.MainMenuControls
 
                                 if (inputAdd == null)
                                 {
+                                    Console.ForegroundColor = ConsoleColor.Red;
                                     Console.WriteLine("Choose yes or no!");
+                                    Console.ResetColor();
                                 }
                                 else if (inputAdd.ToLower() == "yes" || inputAdd.ToLower() == "no")
                                 {
@@ -198,7 +221,9 @@ namespace WeekendDraw.MainMenuControls
                                 }
                                 else
                                 {
+                                    Console.ForegroundColor = ConsoleColor.Red;
                                     Console.WriteLine("Choose yes or no!");
+                                    Console.ResetColor();
                                 }
                             }
 
@@ -224,12 +249,16 @@ namespace WeekendDraw.MainMenuControls
                                 else if (inputDelete == null || isIntiger == false)
                                 {
                                     Console.WriteLine();
+                                    Console.ForegroundColor = ConsoleColor.Red;
                                     Console.WriteLine("ID must be integer");
+                                    Console.ResetColor();
                                 }
                                 else if (!_weekendActivities.Any(x => x.Id == inputToInteger))
                                 {
                                     Console.WriteLine();
+                                    Console.ForegroundColor = ConsoleColor.Red;
                                     Console.WriteLine("ID not listed");
+                                    Console.ResetColor();
                                 }
                                 else if (_weekendActivities.Any(x => x.Id == inputToInteger))
                                 {
@@ -245,7 +274,9 @@ namespace WeekendDraw.MainMenuControls
                         case "save":
                             _weekendActivities.SaveToCsv();
                             Console.WriteLine();
+                            Console.ForegroundColor = ConsoleColor.DarkGreen;
                             Console.WriteLine("List has been saved");
+                            Console.ResetColor();
                             break;
 
                         case "menu":
@@ -256,13 +287,18 @@ namespace WeekendDraw.MainMenuControls
                 else
                 {
                     Console.WriteLine();
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Wrong choice! Choose SHOW / ADD / DELETE / MENU");
+                    Console.ResetColor();
                 }
             }
         }
 
         public void ExitProgram()
         {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("\n\nPress any key to leave.");
+            Console.ResetColor();
             Environment.Exit(0);
         }
 
@@ -281,7 +317,9 @@ namespace WeekendDraw.MainMenuControls
         {
             Console.WriteLine();
             Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine("         --== MAIN MENU ==--  ");
+            Console.ResetColor();
             Console.WriteLine();
             Console.WriteLine("[DARW] - draw your activity for a weekend");
             Console.WriteLine("[EDIT] - edit your list of weekend activities");

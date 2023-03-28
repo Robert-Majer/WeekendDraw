@@ -30,7 +30,9 @@ public class App : IApp
                 if (input == null)
                 {
                     Console.WriteLine();
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Wrong choice! Choose DRAW / EDIT / EXIT");
+                    Console.ResetColor();
                 }
                 else if (input.ToLower() == "draw" || input.ToLower() == "edit" || input.ToLower() == "exit")
                 {
@@ -53,7 +55,9 @@ public class App : IApp
                 else
                 {
                     Console.WriteLine();
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Wrong choice! Choose DRAW / EDIT / EXIT");
+                    Console.ResetColor();
                 }
             }
         }
