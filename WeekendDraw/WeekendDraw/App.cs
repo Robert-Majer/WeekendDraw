@@ -15,9 +15,7 @@ public class App : IApp
     public void Run()
     {
         var weekendActivities = _csvReader.ProcessWeekendActivity("Resources\\Files\\WeekendActivities.csv");
-        var communicationWithUser = new MainMenuFunctions(weekendActivities);
-
-        communicationWithUser.WelcomeUser();
+        var communicationWithUser = MainMenuFunctions.GetInstance(weekendActivities);
 
         while (true)
         {

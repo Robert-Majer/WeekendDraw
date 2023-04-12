@@ -6,11 +6,23 @@ namespace WeekendDraw.MainMenuControls
 {
     public class MainMenuFunctions : IMainMenuFunctions
     {
+        private static MainMenuFunctions _instance = null;
+
         private readonly List<WeekendActivity> _weekendActivities;
 
-        public MainMenuFunctions(List<WeekendActivity> weekendActivities)
+        private MainMenuFunctions(List<WeekendActivity> weekendActivities)
         {
             _weekendActivities = weekendActivities;
+        }
+
+        public static MainMenuFunctions GetInstance(List<WeekendActivity> weekendActivities)
+        {
+            if (_instance == null)
+            {
+                _instance = new MainMenuFunctions(weekendActivities);
+            }
+
+            return _instance;
         }
 
         public void Draw()
